@@ -7,11 +7,15 @@
 }
 body {
     background-image: url(../assets/IMG/fondo.png);
-    background-size: cover;
+    background-size:auto;
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'K2D', sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
+/* ------ footer----- */
 header {
     width: 100%;
     height: 4rem;
@@ -63,16 +67,36 @@ header div p {
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
+/*--------- main------- */
+.gridmain{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows:  6.25rem 25.25rem;
+    grid-template-areas: 
+    "antetitulo antetitulo"
+    "menuPrincipal articulo";
+}
+.antetitulo{
+    grid-area: antetitulo;
+}
+.menuPrincipal{
+    grid-area: menuPrincipal;
+}
+.articulo{
+    grid-area: articulo;
+    height: 24rem;
+    width: 32rem;
+}
+
+
 .menuPrincipal div ol li {
     list-style: none;
     margin: 1.25rem 1.25rem 1.25rem 3rem;
 }
 
 .menuPrincipal div {
-    text-indent: .625rem;
-    height: 400px;
+    margin-left: .625rem;
     padding: 1rem;
-
 }
 
 .menuPrincipal div h3 {
@@ -223,15 +247,16 @@ h3 {
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
-/**/
+/*
 .imgElec {
     height: 24rem;
     width: 32rem;
     align-items: center;
     margin-bottom: 1.25rem;
 }
-
+*/
 .listaElec {
+
     color: white;
     position: center;
     height: 24rem;
@@ -241,7 +266,7 @@ h3 {
     background-image: url(../assets/IMG/Electricidad.jpeg);
 }
 
-.imgElec ul {
+.articulo ul {
     padding-left: 1.56rem;
     text-indent: 0;
 }
@@ -315,10 +340,9 @@ h3 {
 
 .gridFormulario{
     width: 500px;
-
     background-color: #4CAF50;
     display:grid;
-    grid-gap: 10px;
+    column-gap: .9375rem;
     grid-template: 50px 200px 100px 30px /200px 300px;
     grid-template-areas: 
     "t1 t1"
@@ -328,7 +352,11 @@ h3 {
 }
 .t1{
     grid-area: t1;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    align-items:end;
 }
 .datos{
     grid-area: datos;
@@ -340,6 +368,8 @@ h3 {
     grid-area: selec;
 }
 .enviar{
+    width: 6.25rem;
+    height: 1.875rem;
     grid-area: enviar;
 }
 
@@ -351,6 +381,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 0;
 }
 
 footer div p {

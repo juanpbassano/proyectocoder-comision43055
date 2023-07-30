@@ -20,26 +20,28 @@
         </nav>
     </header>
     <main>
-        <div class="antetitulo">
-            <h2 class="titCont">Contáctenos</h2>
-        </div>
-        <section class="menuPrincipal">
-            <div>
-                <h3>Seleccione el tipo de reparacion</h3>
-                <ol>
-                    <li class="mpElec"><a href="electricidad.HTML">Electricidad</a></li>
-                    <li class="mpPlom"><a href="plomeria.html">Plomeria</a></li>
-                    <li class="mpPint"><a href="pintura.html">Pintura</a></li>
-                    <li class="mpCons"><a href="construccion.html">Construccion</a></li>
-                </ol>
+        <div class="gridmain">
+            <div class="antetitulo">
+                <h2 class="titCont">Contáctenos</h2>
             </div>
-            <div >
+            <section class="menuPrincipal">
+                <div>
+                    <h3>Seleccione el tipo de reparacion</h3>
+                    <ol>
+                        <li class="mpElec"><a href="electricidad.html">Electricidad</a></li>
+                        <li class="mpPlom"><a href="plomeria.html">Plomeria</a></li>
+                        <li class="mpPint"><a href="pintura.html">Pintura</a></li>
+                        <li class="mpCons"><a href="construccion.html">Construccion</a></li>
+                    </ol>
+                </div>
+            </section>
+            <div class="articulo">
                 <form action="">
                     <fieldset class="gridFormulario">
                         <span class="t1">Ingresar datos personales</span>
                         <div class="datos">
                             <label for="Nombre:">
-                                <span> Nombres </span>
+                                <span>Nombre</span>
                                 <input type="text" name="Nombre" id="Nombre:" required>
                             </label>
                             <label for="apellido">
@@ -47,8 +49,8 @@
                                 <input type="text" name="apellido" id="apellido" required>
                             </label>
                             <label for="numero de telefono">
-                                    <span>Numero de Cel.</span>
-                                    <input type="number" id="numero de telefono" required>
+                                <span>Numero de Cel.</span>
+                                <input type="number" id="numero de telefono" required>
                             </label>
                             <label for="Email">
                                 <span>Email</span>
@@ -66,13 +68,14 @@
                         </div>
                         <div class="consul">
                             <legend>Desarrolle su consulta</legend>
-                            <textarea name="textarea" rows="10" cols="35" for="mensaje" placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+                            <textarea name="textarea" rows="10" cols="35" for="mensaje"
+                                placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
                         </div>
                         <input class="enviar" type="submit" name="enviar">
-                    </fieldset>    
+                    </fieldset>
                 </form>
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div>
