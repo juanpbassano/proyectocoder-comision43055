@@ -15,7 +15,8 @@ body {
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
-/* ------ footer----- */
+
+/* ------ header----- */
 header {
     width: 100%;
     height: 4rem;
@@ -31,7 +32,10 @@ header {
     z-index: 999;
 }
 
-header div p {
+header div{
+    font-size: 1em;
+}
+header div p{
     text-indent: 12.8rem;
 }
 .navBar {
@@ -82,13 +86,6 @@ header div p {
 .menuPrincipal{
     grid-area: menuPrincipal;
 }
-.articulo{
-    grid-area: articulo;
-    height: 24rem;
-    width: 32rem;
-}
-
-
 .menuPrincipal div ol li {
     list-style: none;
     margin: 1.25rem 1.25rem 1.25rem 3rem;
@@ -115,6 +112,7 @@ header div p {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .antetitulo h2{
     color: white;
@@ -129,7 +127,7 @@ header div p {
     width: 12.5rem;
     height: 3.125rem;
     background-color: blue;
-    border-radius: 10px;
+    border-radius: .625rem;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
@@ -138,7 +136,7 @@ header div p {
     width: 12.5rem; 
     height: 3.125rem;
     background-color: rgb(217, 63, 5, 90%);
-    border-radius: 10px;
+    border-radius: .625rem;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
@@ -147,7 +145,7 @@ header div p {
     width: 12.5rem;
     height: 3.125rem;
     background-color: rgb(217, 63, 5, 90%);
-    border-radius: 10px;
+    border-radius: .625rem;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
@@ -156,7 +154,7 @@ header div p {
     width: 12.5rem;
     height: 3.125rem;
     background-color: black;
-    border-radius: 10px;
+    border-radius: .625rem;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
@@ -165,7 +163,7 @@ header div p {
     width: 12.5rem;
     height: 3.125rem;
     background-color: rgb(189, 255, 0);
-    border-radius: 10px;
+    border-radius: .625rem;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
@@ -174,12 +172,13 @@ header div p {
     width: 12.5rem;
     height: 3.125rem;
     background-color: blue;
-    border-radius: 10px;
+    border-radius: .625rem;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
 
 h3 {
     color: white;
+    font-size: 1rem;
 }
 
 .menuArticulo {
@@ -246,104 +245,73 @@ h3 {
     border-radius: 10px;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
-
-/*
-.imgElec {
+/* -----articulos y listas----- */
+.articulo{
+    grid-area: articulo;
     height: 24rem;
     width: 32rem;
     align-items: center;
-    margin-bottom: 1.25rem;
+    margin: 1.25rem .625rem .625rem 0 ;
 }
-*/
-.listaElec {
-
-    color: white;
-    position: center;
-    height: 24rem;
-    width: 32rem;
-    background-repeat: no-repeat;
-    border-radius: .625rem .625rem 8rem .625rem;
-    background-image: url(../assets/IMG/Electricidad.jpeg);
-}
-
 .articulo ul {
     padding-left: 1.56rem;
-    text-indent: 0;
 }
-
-.imgPlom {
+.articulo ul li{
+    margin-left: .625rem;
+}
+.listaElec {
+    font-size: 1.50rem;
+    color: white;
     height: 24rem;
     width: 32rem;
-    align-items: center;
-    margin-bottom: 1.25rem;
+    border-radius: .625rem .625rem 8rem .625rem;
+    background-image: url(../assets/IMG/Electricidad.jpeg);
+    background-repeat: no-repeat;
+    padding: 1.25rem .625rem .625rem .625rem ;
 }
 
 .listaPlomero {
     background-image: url(../assets/IMG/plomero.png);
     color: white;
-    position: center;
     height: 24rem;
     width: 32rem;
     background-repeat: no-repeat;
     border-radius: .625rem .625rem 8rem .625rem;
-}
-
-.imgPlom ul {
-    padding-left: 1.56rem;
-    text-indent: 0;
-}
-
-.imgPint {
-    height: 24rem;
-    width: 32rem;
-    align-items: center;
-    margin-bottom: 1.25rem;
+    font-size: 1.50rem;
+    padding: 1.25rem .625rem .625rem .625rem ;
 }
 
 .listaPintor {
     background-image: url(../assets/IMG/pintordg.png);
     color: white;
-    position: center;
     height: 24rem;
     width: 32rem;
     background-repeat: no-repeat;
     border-radius: .625rem .625rem 8rem .625rem;
-}
-
-.imgPint ul {
-    padding-left: 1.56rem;
-    text-indent: 0;
-}
-
-.imgConst {
-    height: 24rem;
-    width: 32rem;
-    align-items: center;
-    margin-bottom: 1.25rem;
+    font-size: 1.50rem;
+    padding: 1.25rem .625rem .625rem .625rem ;
 }
 
 .listaConst {
     background-image: url(../assets/IMG/constructor.png);
     color: white;
-    position: center;
     height: 24rem;
     width: 32rem;
     background-repeat: no-repeat;
     border-radius: .625rem .625rem 8rem .625rem;
+    font-size: 1.50rem;
+    padding: 1.25rem .625rem .625rem .625rem ;
 }
 
-.imgConst ul {
-    padding-left: 1.56rem;
-    text-indent: 0;
-}
 /*--------------formulario con GRID---------*/
 
 .gridFormulario{
-    width: 500px;
+    padding: .625rem;
+    width: 31.25rem;
     background-color: #4CAF50;
     display:grid;
     column-gap: .9375rem;
-    grid-template: 50px 200px 100px 30px /200px 300px;
+    grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18.75rem;
     grid-template-areas: 
     "t1 t1"
     "datos consul"
@@ -356,7 +324,7 @@ h3 {
     font-weight: 800;
     display: flex;
     flex-direction: row;
-    align-items:end;
+    align-items:center;
 }
 .datos{
     grid-area: datos;
@@ -366,13 +334,20 @@ h3 {
 }
 .selec{
     grid-area: selec;
+    text-align: center;
 }
 .enviar{
-    width: 6.25rem;
-    height: 1.875rem;
     grid-area: enviar;
+    display: flex;
+    flex-direction: row ;
+    justify-content:right;
+    padding:0 1.25rem .625rem 0;
 }
-
+.boton{
+    width: 3.125rem;
+    height: 1.5625rem;
+    border: solid .0625rem black;
+}
 /*---------footer-----------*/
 footer {
     background: linear-gradient(rgba(182, 218, 173, 0.473), rgba(10, 83, 18, 1));
@@ -381,7 +356,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 0;
+    margin-top: .625rem;
 }
 
 footer div p {
@@ -401,5 +376,65 @@ footer div p {
 
 li {
     font-weight: 700;
+}
+
+    /* ------media queris---- */
+
+@media screen and (max-width:744px){
+    .menuPrincipal div h3{
+        font-size: 1.25rem ;
+    } 
+    
+    .articulo{
+        width: auto;
+        margin: 3.125rem .625rem .625rem 0 ;
+    }
+    .listaElec{
+        height: 24rem;
+        width: 25rem;
+    }
+    .listaPlomero {
+            height: 24rem;
+            width: 25rem;
+        }
+    .listaPintor{
+        height: 24rem;
+        width: 25rem;
+    }
+    .listaConst{
+        height: 24rem;
+        width: 25rem;
+    }
+    .menuArticulo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center ;
+        align-items: center;
+    }
+    .imgArticulo img{
+        size-adjust: 200px ;
+        margin-right: .625rem;
+    }
+    .menuArticulo p{
+        font-size: 1.2rem;
+        padding: .625rem;
+        margin: .625rem;
+    }
+    .gridFormulario{
+        padding: .625rem;
+        width: 25rem;
+        background-color: #4CAF50;
+        display:grid;
+        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 12.5rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+    }
+    .consul textarea{
+        height: 150px; 
+        width: 12.5rem;
+    }
 }
 
