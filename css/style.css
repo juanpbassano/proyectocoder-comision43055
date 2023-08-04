@@ -85,6 +85,7 @@ header div p{
 }
 .menuPrincipal{
     grid-area: menuPrincipal;
+    width:25rem;
 }
 .menuPrincipal div ol li {
     list-style: none;
@@ -205,16 +206,11 @@ h3 {
     height: 18.75rem;
     border-radius: 50%;
 }
-
-.menuPrincipal {
-    display: flex;
-}
-
 .mpElec {
     padding: 5px;
     width: 150px;
     height: 35px;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.596);
     border-radius: 10px;
     box-shadow: .3125rem .3125rem .3125rem gray;
 }
@@ -267,7 +263,7 @@ h3 {
     border-radius: .625rem .625rem 8rem .625rem;
     background-image: url(../assets/IMG/Electricidad.jpeg);
     background-repeat: no-repeat;
-    padding: 1.25rem .625rem .625rem .625rem ;
+    padding: 1.75rem .625rem .625rem .625rem ;
 }
 
 .listaPlomero {
@@ -278,7 +274,7 @@ h3 {
     background-repeat: no-repeat;
     border-radius: .625rem .625rem 8rem .625rem;
     font-size: 1.50rem;
-    padding: 1.25rem .625rem .625rem .625rem ;
+    padding: 2.25rem .625rem 2.25rem .625rem ;
 }
 
 .listaPintor {
@@ -289,7 +285,7 @@ h3 {
     background-repeat: no-repeat;
     border-radius: .625rem .625rem 8rem .625rem;
     font-size: 1.50rem;
-    padding: 1.25rem .625rem .625rem .625rem ;
+    padding: 3.25rem .625rem 3.25rem .625rem ;
 }
 
 .listaConst {
@@ -300,18 +296,17 @@ h3 {
     background-repeat: no-repeat;
     border-radius: .625rem .625rem 8rem .625rem;
     font-size: 1.50rem;
-    padding: 1.25rem .625rem .625rem .625rem ;
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
 }
 
 /*--------------formulario con GRID---------*/
 
 .gridFormulario{
     padding: .625rem;
-    width: 31.25rem;
     background-color: #4CAF50;
     display:grid;
-    column-gap: .9375rem;
-    grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18.75rem;
+    grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
     grid-template-areas: 
     "t1 t1"
     "datos consul"
@@ -335,19 +330,26 @@ h3 {
 .selec{
     grid-area: selec;
     text-align: center;
+    font-size: 0.8rem;
 }
 .enviar{
     grid-area: enviar;
     display: flex;
     flex-direction: row ;
     justify-content:right;
+    align-items: center;
     padding:0 1.25rem .625rem 0;
 }
 .boton{
     width: 3.125rem;
     height: 1.5625rem;
-    border: solid .0625rem black;
+    border-radius: .125rem;
 }
+.selec input{
+    width: auto;
+    margin: .625rem;
+}
+
 /*---------footer-----------*/
 footer {
     background: linear-gradient(rgba(182, 218, 173, 0.473), rgba(10, 83, 18, 1));
@@ -378,16 +380,29 @@ li {
     font-weight: 700;
 }
 
-    /* ------media queris---- */
-
-@media screen and (max-width:744px){
+    /* ------media queries---- */
+@media screen and (max-width:1024px) {
+    .gridFormulario{
+        padding: .625rem;
+        display:grid;
+        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 12.5rem 16rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+    }
+}
+@media screen and (max-width:901px){
     .menuPrincipal div h3{
         font-size: 1.25rem ;
-    } 
-    
+    }
     .articulo{
         width: auto;
         margin: 3.125rem .625rem .625rem 0 ;
+    }
+    .articulo ul li{
+        font-size: 1.3rem;
     }
     .listaElec{
         height: 24rem;
@@ -422,10 +437,36 @@ li {
     }
     .gridFormulario{
         padding: .625rem;
-        width: 25rem;
-        background-color: #4CAF50;
         display:grid;
-        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 12.5rem;
+        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 12.5rem 12rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+    }
+    
+    .consul{
+        width: auto;
+        height: 10.9375rem;
+    }
+    .consul textarea{
+        height: 10rem; 
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width:832px){
+    .articulo form fieldset{
+        max-width: 21.875rem;
+        max-height: 21.875rem;
+    }
+    .gridFormulario{
+        width: auto;
+        padding: .625rem;
+        display:grid;
+        grid-template-columns: 12.5rem 11rem;
+        grid-template-rows:  1.875rem 12.5rem 4.375rem 3.125rem;
         grid-template-areas: 
         "t1 t1"
         "datos consul"
@@ -433,8 +474,73 @@ li {
         ". enviar";
     }
     .consul textarea{
-        height: 150px; 
-        width: 12.5rem;
+        height: 10rem; 
+        width: 11rem;
+    }
+    .menuPrincipal div h3{
+        overflow:visible;
     }
 }
+@media screen and (max-width:771px){
+    h3{
+        
 
+    }
+
+}
+@media screen and (max-width:690px){
+    header div h1{
+        font-size: 1.9rem;
+        }
+    header div p{
+        text-indent: 12rem;
+        }
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        }
+        .navBar a {
+            text-decoration: none;
+            color: black;
+            margin: 0px 1rem 0px 0px;
+            font-weight: 900;
+        }
+        .btInd {
+            text-indent: 0;
+            padding: 1px;
+            width: 6.4rem;
+            height: 1.6rem;
+            background-color: white;
+            border-radius: .625rem;
+            box-shadow: .3125rem .3125rem .3125rem gray;
+        }
+        .btCont {
+            text-indent: 0;
+            padding: 1px;
+            width: 6.4rem;
+            height: 1.6rem;
+            background-color:  white;
+            border-radius: .625rem;
+            box-shadow: .3125rem .3125rem .3125rem gray;
+        }
+}
+@media screen and (max-width:576px){
+    header div h1{
+        font-size: 1.5rem;
+    }
+    header div p{
+        text-indent: 7.4rem;
+    }
+
+}
+@media screen and (max-width:425px){
+    header div h1{
+        font-size: 1.5rem;
+    }
+    header div p{
+        text-indent: 7.4rem;
+    }
+
+}
