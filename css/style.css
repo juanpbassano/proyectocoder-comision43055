@@ -502,55 +502,49 @@ li {
         height: 10rem; 
         width: 11rem;
     }
-    .menuPrincipal div h3{
-        overflow:visible;
-    }
 }
 @media screen and (max-width:771px){
-    h3{
-        
-
-    }
 
 }
-@media screen and (max-width:690px){
-    header div h1{
+@media screen and (max-width:690px) {
+    header div h1 {
         font-size: 1.9rem;
-        }
-    header div p{
+    }
+    header div p {
         text-indent: 12rem;
-        }
+    }
     .navBar {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        }
-        .navBar a {
-            text-decoration: none;
-            color: black;
-            margin: 0px 1rem 0px 0px;
-            font-weight: 900;
-        }
-        .btInd {
-            text-indent: 0;
-            padding: 1px;
-            width: 6.4rem;
-            height: 1.6rem;
-            background-color: white;
-            border-radius: .625rem;
-            box-shadow: .3125rem .3125rem .3125rem gray;
-        }
-        .btCont {
-            text-indent: 0;
-            padding: 1px;
-            width: 6.4rem;
-            height: 1.6rem;
-            background-color:  white;
-            border-radius: .625rem;
-            box-shadow: .3125rem .3125rem .3125rem gray;
-        }
+    }
+    .navBar a {
+        text-decoration: none;
+        color: black;
+        margin: 0px 1rem 0px 0px;
+        font-weight: 900;
+    }
+    .btInd {
+        text-indent: 0;
+        padding: 1px;
+        width: 6.4rem;
+        height: 1.6rem;
+        background-color: white;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    .btCont {
+        text-indent: 0;
+        padding: 1px;
+        width: 6.4rem;
+        height: 1.6rem;
+        background-color: white;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
 }
+
 @media screen and (max-width:576px){
     header div h1{
         font-size: 1.5rem;
@@ -560,12 +554,160 @@ li {
     }
 
 }
-@media screen and (max-width:425px){
+@media screen and (max-width:426px){
+    header{
+        max-width: fit-content;
+    }
     header div h1{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     header div p{
-        text-indent: 7.4rem;
+        font-size: 0.8rem;
+        text-indent: 4rem;
+    }
+    .btInd {
+        text-indent: 0;
+        padding: 1px;
+        width: 6.4rem;
+        height: 1.6rem;
+        background-color: white;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    .btCont {
+        text-indent: 0;
+        padding: 1px;
+        width: 6.4rem;
+        height: 1.6rem;
+        background-color: white;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
     }
 
+
+    .gridmain{
+        align-items: center;
+        display: grid;
+        grid-template-columns:50% 50% ;
+        grid-template-rows:  50% 50%;
+        grid-template-areas: 
+        "menuPrincipal antetitulo"
+        "articulo .";
+    }
+    .menuPrincipal div {
+        margin-left: .3125rem;
+        padding: .3125rem;
+    }
+    .menuArticulo div h3{
+        font-size: 0.5rem;
+    }
+    .menuPrincipal div ol li a{
+    margin-left: 0;
+    }
+    .mpElec {
+        width:6.4375rem;
+        height:fit-content;
+        background-color: rgba(0, 0, 255, 0.596);
+        border-radius: 10px;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .mpPlom {
+        width:6.4375rem;
+        height:fit-content;
+        background-color: rgb(217, 63, 5, 90%);
+        border-radius: 10px;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .mpPint {
+        width:6.4375rem;
+        height:fit-content;
+        background-image: url(../assets/IMG/BOTONLollipop-Rainbox-Swirl.jpg);
+        border-radius: 10px;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .mpCons {
+        width:6.4375rem;
+        height:fit-content;
+        background-color: rgb(189, 255, 0);
+        border-radius: 10px;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    .antetitulo {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .titElec {
+        width: fit-content;
+        text-align: center;
+        height: 3.125rem;
+        background-color: blue;
+        padding: 1rem;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    .titPlom {
+        width: fit-content;
+        text-align: center; 
+        height: 3.125rem;
+        background-color: rgb(217, 63, 5, 90%);
+        padding: 1rem;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .titPlom {
+        width: fit-content;
+        text-align: center;
+        height: 3.125rem;
+        background-color: rgb(217, 63, 5, 90%);
+        padding: 1rem;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .titPint {
+        width: fit-content;
+        text-align: center;
+        height: 3.125rem;
+        background-color: black;
+        padding: 1rem;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .titConst {
+        width: fit-content;
+        text-align: center;
+        height: 3.125rem;
+        background-color: rgb(189, 255, 0);
+        padding: 1rem;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+    
+    .titCont {
+        width: fit-content;
+        text-align: center;
+        height: 3.125rem;
+        background-color: blue;
+        padding: 1rem;
+        border-radius: .625rem;
+        box-shadow: .3125rem .3125rem .3125rem gray;
+    }
+
+    footer{
+        max-width: fit-content;
+    }
+    footer div p{
+        font-size: 0.7rem;
+    }
+    .siganosFoot {
+        margin-right:0.3rem;
+    }
 }
+
