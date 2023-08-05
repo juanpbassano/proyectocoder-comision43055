@@ -7,17 +7,23 @@
 }
 body {
     background-image: url(../assets/IMG/fondo.png);
-    background-size:auto;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'K2D', sans-serif;
     display: grid;
+    width: auto;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
 }
 
 /* ------ header----- */
 header {
+    grid-area: header;
     width: 100%;
     height: 4rem;
     text-indent: 0.625rem;
@@ -72,10 +78,13 @@ header div p{
 }
 
 /*--------- main------- */
+main{
+    grid-area: main;
+}
 .gridmain{
     display: grid;
-    grid-template-columns:1fr 1fr ;
-    grid-template-rows:  6.25rem 25.25rem;
+    grid-template-columns:40% 60% ;
+    grid-template-rows:  7rem 27.25rem;
     grid-template-areas: 
     "antetitulo antetitulo"
     "menuPrincipal articulo";
@@ -85,7 +94,7 @@ header div p{
 }
 .menuPrincipal{
     grid-area: menuPrincipal;
-    width:25rem;
+    width: 24.375rem;
 }
 .menuPrincipal div ol li {
     list-style: none;
@@ -109,7 +118,6 @@ header div p{
 }
 .antetitulo{
     width: 100%;
-    height: 6.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,11 +271,13 @@ h3 {
     border-radius: .625rem .625rem 8rem .625rem;
     background-image: url(../assets/IMG/Electricidad.jpeg);
     background-repeat: no-repeat;
+    background-position: center;
     padding: 1.75rem .625rem .625rem .625rem ;
 }
 
 .listaPlomero {
     background-image: url(../assets/IMG/plomero.png);
+    background-position: center;
     color: white;
     height: 24rem;
     width: 32rem;
@@ -279,6 +289,7 @@ h3 {
 
 .listaPintor {
     background-image: url(../assets/IMG/pintordg.png);
+    background-position: center;
     color: white;
     height: 24rem;
     width: 32rem;
@@ -290,6 +301,7 @@ h3 {
 
 .listaConst {
     background-image: url(../assets/IMG/constructor.png);
+    background-position: center;
     color: white;
     height: 24rem;
     width: 32rem;
@@ -301,7 +313,10 @@ h3 {
 }
 
 /*--------------formulario con GRID---------*/
-
+div form{
+    border: solid rgba(0, 0, 0, 0.61) .0300rem;
+    border-radius: .313rem;
+}
 .gridFormulario{
     padding: .625rem;
     background-color: #4CAF50;
@@ -352,6 +367,7 @@ h3 {
 
 /*---------footer-----------*/
 footer {
+    grid-area: footer;
     background: linear-gradient(rgba(182, 218, 173, 0.473), rgba(10, 83, 18, 1));
     color: rgb(255, 255, 255);
     height: 6.25rem;
@@ -392,13 +408,24 @@ li {
         "selec selec"
         ". enviar";
     }
+    .menuArticulo p{
+        padding: 6.25rem;
+    }
 }
 @media screen and (max-width:901px){
+    .gridmain{
+        display: grid;
+        grid-template-columns:40% 60% ;
+        grid-template-rows:  12rem 25.25rem;
+        grid-template-areas: 
+        "antetitulo antetitulo"
+        "menuPrincipal articulo";
+    }
     .menuPrincipal div h3{
         font-size: 1.25rem ;
     }
     .articulo{
-        width: auto;
+        width: 21.5rem;
         margin: 3.125rem .625rem .625rem 0 ;
     }
     .articulo ul li{
@@ -435,6 +462,9 @@ li {
         padding: .625rem;
         margin: .625rem;
     }
+    form{
+        width:fit-content;
+    }
     .gridFormulario{
         padding: .625rem;
         display:grid;
@@ -445,7 +475,6 @@ li {
         "selec selec"
         ". enviar";
     }
-    
     .consul{
         width: auto;
         height: 10.9375rem;
@@ -457,10 +486,6 @@ li {
 }
 
 @media screen and (max-width:832px){
-    .articulo form fieldset{
-        max-width: 21.875rem;
-        max-height: 21.875rem;
-    }
     .gridFormulario{
         width: auto;
         padding: .625rem;
