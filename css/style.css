@@ -599,23 +599,19 @@ li {
     .mpElec {
         width:6.4375rem;
         height:fit-content;
-        background-color: rgba(0, 0, 255, 0.596);
     }
     
     .mpPlom {
         width:6.4375rem;
         height:fit-content;
-        background-color: rgb(217, 63, 5, 90%);
     }
     .mpPint {
         width:6.4375rem;
         height:fit-content;
-        background-image: url(../assets/IMG/BOTONLollipop-Rainbox-Swirl.jpg);
     }
     .mpCons {
         width:6.4375rem;
         height:fit-content;
-        background-color: rgb(189, 255, 0);
     }
     .menuArticulo p{
         font-size: 1rem;
@@ -716,8 +712,15 @@ li {
     }
 }
 @media screen and (max-width:376px){
+    header div h1{
+        font-size: 1rem;
+        text-indent: .1875rem;
+    }
+    header div p{
+        text-indent: 3.5rem;
+    }
     .gridmain{
-        grid-template-columns: 14.25rem 9.1875rem;
+        grid-template-columns: 14rem 9.1875rem;
     }
     .menuArticulo{
         margin-right: 0px;
@@ -757,6 +760,85 @@ li {
     }
     .datos input{
         width: 9rem;
+    }
+}
+@media screen and (max-width:321px){
+    .gridmain{
+        grid-template-columns: 12.24rem 7.75rem;    
+    }
+    .menuArticulo{
+        margin-right: 0px;
+    }
+    .menuArticulo img{
+        margin-top: 0px;
+        width: 6rem;
+        height: 6rem;
+    }
+    .titElec{
+        padding: 0.5rem;
+    }
+    .titPint{
+        padding: 0.5rem;
+    }
+    .titPlom{
+        padding: 0.5rem;
+    }
+    .titConst{
+        padding: 0.5rem;
+    }
+    .titCont{
+        padding: 0.5rem;
+    }
+    .articulo {
+        width: 18.5rem;
+    }
+    .listaElec{
+        width: 19.375rem;
+    }
+    .articulo ul li {
+        font-size: 1.18rem;
+    }
+    .listaPintor{
+        width: 19.375rem;    
+    }
+    .listaPlomero{
+        width: 19.375rem;    
+    }
+    .listaConst{
+        width: 19.375rem;
+        padding-top: 2.25rem;
+    }
+    .antetitulo {
+        font-size: 0.8rem ;
+        width:fit-content;
+    }
+    .menuPrincipal{
+        width: 18.75rem;
+    }
+    .articulo {
+        margin-left: 0.12rem;
+    }
+    .gridFormulario{
+        padding: .300rem;
+        display:grid;
+        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 9.5rem 9.5rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+    }
+    .consul textarea{
+        width: 9.6rem;
+    }
+    .datos input{
+        width: 8.5rem;
+    }
+    .siganosFoot p{
+        font-size: 1rem;
+    }
+    .siganosFoot a img{
+        width: 1.875rem;
     }
 
 }
