@@ -313,13 +313,11 @@ h3 {
 }
 
 /*--------------formulario con GRID---------*/
-div form{
-    border: solid rgba(0, 0, 0, 0.61) .0300rem;
-    border-radius: .313rem;
-}
 .gridFormulario{
     padding: .625rem;
     background-color: #4CAF50;
+    border: solid rgba(0, 0, 0, 0.61) .0300rem;
+    border-radius: .313rem;
     display:grid;
     grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
     grid-template-areas: 
@@ -466,14 +464,7 @@ li {
         width:fit-content;
     }
     .gridFormulario{
-        padding: .625rem;
-        display:grid;
         grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 12.5rem 12rem;
-        grid-template-areas: 
-        "t1 t1"
-        "datos consul"
-        "selec selec"
-        ". enviar";
     }
     .consul{
         width: auto;
@@ -584,9 +575,7 @@ li {
         padding: .125rem;
         width: 4.6rem;
         height: 1.5rem;
-
     }
-
     /* main mobiles */
     .gridmain{
         align-items: center;
@@ -646,7 +635,6 @@ li {
         margin-left: .3125rem;
         height: 25rem;
     }
-
     .titElec {
         width: fit-content;
         text-align: center;
@@ -670,7 +658,6 @@ li {
         width: fit-content;
         text-align: center;
         height: 3.125rem;
-        background-color: rgb(217, 63, 5, 90%);
         padding: 1rem;
         border-radius: .625rem;
         box-shadow: .3125rem .3125rem .3125rem gray;
@@ -680,7 +667,6 @@ li {
         width: fit-content;
         text-align: center;
         height: 3.125rem;
-        background-color: black;
         padding: 1rem;
         border-radius: .625rem;
         box-shadow: .3125rem .3125rem .3125rem gray;
@@ -690,7 +676,6 @@ li {
         width: fit-content;
         text-align: center;
         height: 3.125rem;
-        background-color: rgb(189, 255, 0);
         padding: 1rem;
         border-radius: .625rem;
         box-shadow: .3125rem .3125rem .3125rem gray;
@@ -700,7 +685,6 @@ li {
         width: fit-content;
         text-align: center;
         height: 3.125rem;
-        background-color: blue;
         padding: 1rem;
         border-radius: .625rem;
         box-shadow: .3125rem .3125rem .3125rem gray;
@@ -731,4 +715,42 @@ li {
         margin-right:0.3rem;
     }
 }
+@media screen and (max-width:376px){
+    .gridmain{
+        grid-template-columns: 14.25rem 9.1875rem;
+    }
+    .listaElec{
+        width: 22.5rem;
+    }
+    .listaPintor{
+        width: 22.5rem;
+    }
+    .listaPlomero{
+        width: 22.5rem;
+    }
+    .listaConst{
+        width: 22.5rem;
+        padding-top: 2.25rem;
+    }
+    .antetitulo {
+        font-size: 0.8rem ;
+        width:fit-content;
+    }
+    .menuPrincipal{
+        width: 18.75rem;
+    }
+    .gridFormulario{
+        padding: .300rem;
+        display:grid;
+        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 10rem 11rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+    }
+    .datos input{
+        width: 9rem;
+    }
 
+}
