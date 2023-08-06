@@ -632,7 +632,7 @@ li {
         align-items: center;
     }
     .articulo{
-        margin-left: .3125rem;
+        margin-left: .8rem;
         height: 25rem;
     }
     .titElec {
@@ -719,17 +719,23 @@ li {
     .gridmain{
         grid-template-columns: 14.25rem 9.1875rem;
     }
+    .menuArticulo{
+        margin-right: 0px;
+    }
+    .menuArticulo img{
+        margin-top: 0px;
+    }
     .listaElec{
-        width: 22.5rem;
+        width: 22rem;
     }
     .listaPintor{
-        width: 22.5rem;
+        width: 22rem;
     }
     .listaPlomero{
-        width: 22.5rem;
+        width: 22rem;
     }
     .listaConst{
-        width: 22.5rem;
+        width: 22rem;
         padding-top: 2.25rem;
     }
     .antetitulo {
